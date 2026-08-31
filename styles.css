@@ -1,205 +1,322 @@
 
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Geist+Mono:wght@100..900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
 :root {
-  --text: #ffffff;
-  --bkg: #
-  
-  --serif: 'Instrument Serif', serif;
-  --sans-serif: 'Inter', sans-serif;
-  --mono: 'Geist Mono', monospace;
-  --sans: 'Instrument Sans', sans-serif;
-  --mond: 'EB Garamond', serif;
+  --bg-top: #0c3aff;
+  --bg-mid: #3b3fff;
+  --bg-bottom: #ff1888;
+  --text: #f6f6f6;
+  --brand-outline: rgba(0, 0, 0, 0.9);
+  --panel-bg: rgba(255, 255, 255, 0.12);
+  --nav-bg: rgba(255, 255, 255, 0.94);
+  --nav-text: #0e0e0e;
+  --muted: rgba(255, 255, 255, 0.78);
+  --shadow: rgba(0, 0, 0, 0.15);
 }
 
-*, *::before, *::after {
+* {
   box-sizing: border-box;
 }
 
 html, body {
   margin: 0;
-  padding: 0;
-  height: 100%;
+  min-height: 100%;
+  min-width: 320px;
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 52%, var(--bg-bottom) 100%);
+  color: var(--text);
 }
 
 body {
-  font-family: var(--sans-serif);
-  background: linear-gradient(180deg, #3232FF 0%, #9F19FF 50%, #ff0073 100%); /* #FF0048*/
-  background-attachment: fixed;
-  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button, input, textarea, select {
+  font: inherit;
 }
 
 ::selection {
   background: rgba(255, 255, 255, 0.2);
 }
 
-.layout {
-  display: flex;
+.page-shell {
+  width: 100%;
   min-height: 100vh;
+  padding: 3.4rem 2.5rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
-
-
-
-
-.sidebar {
-  padding: clamp(3rem, 6vh, 5rem) clamp(1.5rem, 3vw, 3rem);
-  padding-left: clamp(1.5rem, 4vw, 5rem);
-  flex-shrink: 0;
+.topbar {
+  width: min(68rem, calc(100% - 12vw));
+  margin: 0 auto 3.8rem;
+  background: var(--nav-bg);
+  border: 3px solid var(--brand-outline);
+  border-radius: 999px;
+  min-height: 4.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.08);
+  padding: 0.9rem 1.35rem 0.8rem 1rem;
 }
 
-.sidebar-group {
-  margin-bottom: 2.5rem;
+.brand-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: var(--nav-text);
+  line-height: 1;
+  padding-left: 0.2rem;
 }
 
-.sidebar-hero {
-  font-family: var(--serif);
-  font-size: clamp(1.5rem, 3vw, 2rem);
+.brand-mark {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2.5px solid var(--nav-text);
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.brand-mark::before {
+  content: "";
+  position: absolute;
+  inset: 0.18rem;
+  border-radius: 50%;
+  background: var(--nav-text);
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  transform: rotate(180deg);
+}
+
+.brand-name {
+  font-family: "EB Garamond", serif;
+  font-size: clamp(1.9rem, 2vw, 2.4rem);
   font-weight: 400;
-  margin: 0 0 2rem;
-  line-height: 1.3;
-  text-decoration: underline;
+  letter-spacing: -0.04em;
   font-style: italic;
 }
 
-.sidebar-header {
-  font-family: var(--serif);
-  font-size: clamp(1.25rem, 2vw, 1.75rem);
-  font-weight: 400;
-  margin: 0 0 0.5rem;
-  line-height: 1.3;
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: clamp(0.9rem, 1.5vw, 2.1rem);
+  color: var(--nav-text);
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
 }
 
-.sidebar-items {
-  list-style: none;
-  font-weight: bold;
-  padding: 0;
-  margin: 0;
-}
-
-.sidebar-items li {
-  font-family: var(--mono);
-  font-size: clamp(0.875rem, 1.2vw, 1.125rem);
-  line-height: 1.7;
-  opacity: 0.85;
-}
-
-.sidebar-items a {
-  color: var(--text);
+.nav-link {
+  color: var(--nav-text);
   text-decoration: none;
+  font-size: clamp(1rem, 1.15vw, 1.22rem);
+  line-height: 1;
+  position: relative;
 }
 
-.sidebar-items a:hover {
+.nav-link:hover {
   text-decoration: underline;
   text-underline-offset: 0.15em;
 }
 
-
-
-
-
-.content-area {
-  flex: 1;
+.content-row {
   display: flex;
-  flex-direction: column;
-  padding: clamp(3rem, 6vh, 5rem) clamp(1.5rem, 4vw, 5rem);
-  padding-left: clamp(3rem, 8vw, 8rem);
+  align-items: flex-start;
+  justify-content: center;
+  width: min(90rem, 100%);
+  margin: 0 auto;
+  gap: clamp(1.8rem, 4vw, 6rem);
+  flex: 1;
 }
 
-.main {
-  flex: 1;
+.info-column {
+  width: 15.5rem;
+  min-width: 15.5rem;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
+  gap: 0.9rem;
+  padding-top: 0.35rem;
+}
+
+.info-block {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.14);
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.info-label {
+  font-family: "EB Garamond", serif;
+  font-size: clamp(2.7rem, 3vw, 3.2rem);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.045em;
+  margin: 0 0 0.5rem;
+  color: rgba(255, 255, 255, 0.96);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  min-height: 14rem;
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 
+.info-item,
+.info-note {
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  color: var(--text);
+  line-height: 1.35;
+  text-align: left;
+  margin-left: 1rem;
+  opacity: 0.98;
+}
 
+.info-item a {
+  color: var(--text);
+  text-decoration: none;
+}
 
+.info-item a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
 
-
+.info-note {
+  opacity: 0.85;
+  font-size: 1rem;
+  margin-top: 0.1rem;
+}
 
 .hero {
+  flex: 1;
+  max-width: 52rem;
   display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 27rem;
+  padding-top: 1.3rem;
 }
 
-.hero-heading {
-  font-family: var(--serif);
-  font-size: clamp(2.5rem, 5.5vw, 5rem);
-  font-weight: 400;
-  line-height: 1.1;
+.hero h1 {
   margin: 0;
-}
-
-.hero-description {
-  font-family: var(--sans-serif);
-  font-size: clamp(1rem, 2vw, 1.5rem);
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-}
-
-.hero-description strong {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(2.2rem, 3vw, 3.45rem);
+  line-height: 1.06;
+  letter-spacing: -0.06em;
   font-weight: 700;
-  color: var(--text);
+  color: rgba(255, 255, 255, 0.96);
+  text-wrap: balance;
 }
-
-
-
-
-
 
 .coming-soon {
-  font-family: var(--serif);
-  font-size: clamp(1.25rem, 2.5vw, 2rem);
+  margin: 2.4rem 0 0;
+  font-family: "EB Garamond", serif;
+  font-size: clamp(2rem, 2.6vw, 3rem);
+  line-height: 1;
+  font-style: italic;
   font-weight: 400;
-  margin: clamp(2rem, 5vh, 4rem) 0 0;
-  line-height: 1.3;
-  font-style: italic;
+  letter-spacing: -0.04em;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
 }
 
-.footer {
-  font-family: var(--mono);
-  font-size: clamp(0.75rem, 1vw, 0.875rem);
-  opacity: 0.8;
+.site-footer {
+  width: min(95%, 80rem);
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 0.5rem;
-  padding-bottom: 1rem;
-  flex-wrap: wrap;
+  gap: 0.75rem;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.8rem, 0.9vw, 1rem);
+  color: rgba(255, 255, 255, 0.92);
+  margin: 1.5rem auto 0;
+  padding-bottom: 0.75rem;
 }
 
-.cursor {
-  display: inline-block;
-  width: 0.45em;
-  height: 0.45em;
-  border-radius: 2px;
-  background: var(--text);
-  flex-shrink: 0;
-}
-
-
-
-
-
-.link {
+.site-footer a {
   color: var(--text);
-  font-style: italic;
-  font-weight: bold;}
-.link.footer {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.site-footer a:hover {
   text-decoration: underline;
+  text-underline-offset: 0.16em;
 }
 
-.back-link {
-  display: inline-block;
-  padding: 6px 14px;
-  border-radius: 8px;
-  transition: background 0.2s ease;
+.footer-dot {
+  font-size: 0.8em;
+  opacity: 0.9;
 }
 
-.back-link:hover {
-  background: rgba(255, 255, 255, 0.12);
+@media (max-width: 860px) {
+  .page-shell {
+    padding: 2.2rem 1.1rem 1.5rem;
+  }
+
+  .topbar {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 1.3rem;
+    padding: 1rem 1rem 1.1rem;
+  }
+
+  .content-row {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .info-column {
+    width: 100%;
+    min-width: 0;
+    align-items: flex-start;
+    padding-top: 0;
+  }
+
+  .info-block {
+    width: 100%;
+    display: block;
+  }
+
+  .info-label {
+    writing-mode: horizontal-tb;
+    transform: none;
+    min-height: 0;
+    margin-bottom: 0.6rem;
+  }
+
+  .hero {
+    min-height: auto;
+    width: 100%;
+    text-align: center;
+    padding-top: 0.5rem;
+  }
+
+  .hero h1 {
+    text-wrap: pretty;
+  }
+
+  .site-footer {
+    flex-wrap: wrap;
+  }
 }
