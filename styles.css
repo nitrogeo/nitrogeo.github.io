@@ -24,28 +24,15 @@ body {
   color: var(--text);
 }
 
+  /* also active = on-click and link = unvisited and visited = visited*/
+  /* purple is #c6a0f6 */
   /* All links */
   a {
-    color: #3498db; /* Blue color */
-    text-decoration: none; /* Removes the underline (optional) */
-  }
-
-  /* Unvisited link state */
-  a:link {
-    color: #3498db;
-  }
-
-  /* Visited link state */
-  a:visited {
-    color: #9b59b6; /* Purple color */
+    color: #f5bde6; /* pink */
+    text-decoration: none; /* removes the underline*/
   }
 
   /* Mouse-over (hover) state */
   a:hover {
-    color: #e74c3c; /* Red color */
-  }
-
-  /* Active (the moment it is clicked) state */
-  a:active {
-    color: #f1c40f; /* Yellow color */
+    color: #7dc4e4; /* blue */
   }
