@@ -1,0 +1,51 @@
+
+:root {
+  /* catppuccin btw lol */
+
+  /* colors */
+  --bg: #24273a;
+  /* --text: #f6f6f6; */
+  --text: #cad3f5;
+
+  /* fonts */
+  --font-main: "Inter", sans-serif;
+  --font-serif: "Instrment Serif";
+  --font-mono: "Geist Mono";
+  --font-chill: "Permanent Marker"; /* make it the ones from figma later lol */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: --font-main;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+  /* All links */
+  a {
+    color: #3498db; /* Blue color */
+    text-decoration: none; /* Removes the underline (optional) */
+  }
+
+  /* Unvisited link state */
+  a:link {
+    color: #3498db;
+  }
+
+  /* Visited link state */
+  a:visited {
+    color: #9b59b6; /* Purple color */
+  }
+
+  /* Mouse-over (hover) state */
+  a:hover {
+    color: #e74c3c; /* Red color */
+  }
+
+  /* Active (the moment it is clicked) state */
+  a:active {
+    color: #f1c40f; /* Yellow color */
+  }
