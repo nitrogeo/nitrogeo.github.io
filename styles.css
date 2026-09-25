@@ -9,9 +9,10 @@
 
   /* fonts */
   --font-main: "Inter", sans-serif;
-  --font-serif: "Instrment Serif";
+  --font-serif: "Instrument Serif", serif;
   --font-mono: "Geist Mono";
-  --font-chill: "Permanent Marker"; /* make it the ones from figma later lol */
+  --font-chill: "Knewave"; /* make it the ones from figma later lol */
+  --font-pixel: "Geist Pixel";
 }
 
 * {
@@ -19,20 +20,29 @@
 }
 
 body {
-  font-family: --font-main;
+  font-family: var(--font-main);
   background-color: var(--bg);
   color: var(--text);
 }
 
-  /* also active = on-click and link = unvisited and visited = visited*/
-  /* purple is #c6a0f6 */
-  /* All links */
-  a {
-    color: #f5bde6; /* pink */
-    text-decoration: none; /* removes the underline*/
-  }
+/* also active = on-click and link = unvisited and visited = visited*/
+/* purple is #c6a0f6 */
+/* All links */
+a {
+  color: #f5bde6; /* pink */
+  text-decoration: none; /* removes the underline*/
+}
 
-  /* Mouse-over (hover) state */
-  a:hover {
-    color: #7dc4e4; /* blue */
-  }
+/* Mouse-over (hover) state */
+a:hover {
+  color: #7dc4e4; /* blue */
+}
+
+
+/* custom classes */
+.h1 {
+  font-weight: normal;
+}
+.hero-text {
+  font-family: var(--font-serif)
+}
