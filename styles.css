@@ -1,4 +1,42 @@
 
+/* local fonts! */
+@font-face {
+  font-family: 'Inter';
+  font-weight: 400;
+  src: url('.assets/fonts/inter/Inter-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Instrument Serif';
+  font-weight: 400;
+  src: url('.assets/fonts/instrument-serif/InstrumentSerif-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Instrument Serif';
+  font-weight: 400;
+  font-style: italic;
+  src: url('.assets/fonts/instrument-serif/InstrumentSerif-Italic.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Geist Mono';
+    font-weight: 400;
+    src: url('.assets/fonts/geist-mono/GeistMono-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Geist Pixel';
+    font-weight: 400;
+    src: url('.assets/fonts/geist-pixel/GeistPixel-Square.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Knewave';
+    font-weight: 400;
+    src: url('.assets/fonts/knewave/Knewave-Regular.woff2') format('woff2');
+}
+
 :root {
   /* catppuccin btw lol */
 
@@ -6,17 +44,22 @@
   --bg: #24273a;
   /* --text: #f6f6f6; */
   --text: #cad3f5;
+  /* ========== */
+  --accent1: #f5bde6;
+  --accent2: #7dc4e4;
+  --accent3: #c6a0f6;
 
+  
   /* fonts */
   --font-main: "Inter", sans-serif;
   --font-serif: "Instrument Serif", serif;
   --font-mono: "Geist Mono";
-  --font-chill: "Knewave"; /* make it the ones from figma later lol */
+  --font-chill: "Knewave"; /* make it the ones from figma later lol // done idk when lol; 10.20.2026*/
   --font-pixel: "Geist Pixel";
 }
 
 * {
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
 }
 
 body {
@@ -29,13 +72,13 @@ body {
 /* purple is #c6a0f6 */
 /* All links */
 a {
-  color: #f5bde6; /* pink */
+  color: var(--accent1); /* pink */
   text-decoration: none; /* removes the underline*/
 }
 
 /* Mouse-over (hover) state */
 a:hover {
-  color: #7dc4e4; /* blue */
+  color: var(--accent2); /* blue */
 }
 
 
