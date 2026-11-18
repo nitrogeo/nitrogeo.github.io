@@ -84,7 +84,6 @@
 /* page main */
 * {
   /*box-sizing: border-box;*/
-
 }
 
 body {
@@ -145,13 +144,15 @@ a:hover {
 
 
 
-/* custom classes */
-.h1 {
+/* custom HERO classes */
+.hero-a {
   font-weight: normal;
 }
-.hero-text {
-  font-family: var(--font-serif)
+.hero-b {
+  color: var(--accent1)
 }
+
+
 
 /* custom bullet pts! */
 .sitemap li {
