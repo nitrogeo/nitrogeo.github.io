@@ -84,8 +84,7 @@
 /* page main */
 * {
   /*box-sizing: border-box;*/
-    width: min(90%, 48rem);
-    margin-inline: auto;
+
 }
 
 body {
@@ -108,7 +107,7 @@ a:hover {
 }
 
 /* Shared page boundaries // margin? pretty sure */
-.site-shell { /* doesnt work btw *
+.site-shell { /* doesnt work btw ?? idk fixing */
     width: min(90%, 48rem);
     margin-inline: auto;
 }
