@@ -1,42 +1,63 @@
 
 /* local fonts! */
 @font-face {
+  font-family: 'Zalando Sans Expanded';
+  font-weight: 400;
+  src: url('.assets/fonts/zalando/ZalandoSansExpanded-VariableFont_wght.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Zalando Sans Expanded';
+  font-weight: 400;
+  font-style: italic;
+  src: url('.assets/fonts/zalando/ZalandoSansExpanded-Italic-VariableFont_wght.woff2') format('woff2');
+}
+
+@font-face {
   font-family: 'Inter';
   font-weight: 400;
-  src: url('assets/fonts/inter/Inter-Regular.woff2') format('woff2');
+  src: url('.assets/fonts/inter/Inter-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-style: italic;
+  src: url('.assets/fonts/inter/Inter-Italic.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Instrument Serif';
   font-weight: 400;
-  src: url('assets/fonts/instrument-serif/InstrumentSerif-Regular.woff2') format('woff2');
+  src: url('.assets/fonts/instrument-serif/InstrumentSerif-Regular.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Instrument Serif';
   font-weight: 400;
   font-style: italic;
-  src: url('assets/fonts/instrument-serif/InstrumentSerif-Italic.woff2') format('woff2');
+  src: url('.assets/fonts/instrument-serif/InstrumentSerif-Italic.woff2') format('woff2');
 }
 
 @font-face {
     font-family: 'Geist Mono';
     font-weight: 400;
-    src: url('.assets/fonts/geist-mono/GeistMono-Regular.woff2') format('woff2');
+    src: url('..assets/fonts/geist-mono/GeistMono-Regular.woff2') format('woff2');
 }
 
 @font-face {
     font-family: 'Geist Pixel';
     font-weight: 400;
-    src: url('.assets/fonts/geist-pixel/GeistPixel-Square.woff2') format('woff2');
+    src: url('..assets/fonts/geist-pixel/GeistPixel-Square.woff2') format('woff2');
 }
 
 @font-face {
     font-family: 'Knewave';
     font-weight: 400;
-    src: url('.assets/fonts/knewave/Knewave-Regular.woff2') format('woff2');
+    src: url('..assets/fonts/knewave/Knewave-Regular.woff2') format('woff2');
 }
 
+/* vars! */
 :root {
   /* catppuccin btw lol */
 
@@ -56,10 +77,15 @@
   --font-mono: "Geist Mono";
   --font-chill: "Knewave"; /* make it the ones from figma later lol // done idk when lol; 10.20.2026*/
   --font-pixel: "Geist Pixel";
+  --font-wide: "Zalando Sans Expanded";
 }
 
+
+/* page main */
 * {
   /*box-sizing: border-box;*/
+    width: min(90%, 48rem);
+    margin-inline: auto;
 }
 
 body {
@@ -81,6 +107,44 @@ a:hover {
   color: var(--accent2); /* blue */
 }
 
+/* Shared page boundaries // margin? pretty sure */
+.site-shell { /* doesnt work btw *
+    width: min(90%, 48rem);
+    margin-inline: auto;
+}
+
+
+
+/* navbar stuff! */
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    padding-block: 1.5rem;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
+/* Links */
+.navbar a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+    color: var(--accent2)
+}
+
+
+
+
 
 /* custom classes */
 .h1 {
@@ -88,4 +152,21 @@ a:hover {
 }
 .hero-text {
   font-family: var(--font-serif)
+}
+
+/* custom bullet pts! */
+.sitemap li {
+  list-style: "– ";
+}
+.index-links li {
+  list-style: "– ";
+}
+
+.underline {
+  color: var(--accent1);
+  text-decoration: underline;
+}
+
+.navbar-logo {
+  font-family: var(--font-wide);
 }
