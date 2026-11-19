@@ -100,7 +100,7 @@
 
 /* page main */
 * {
-  /*box-sizing: border-box;*/
+  box-sizing: border-box;
   font-weight: normal; /* tmp fix for weird bolded intrument serif idk */
 }
 
