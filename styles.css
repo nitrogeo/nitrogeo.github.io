@@ -3,15 +3,32 @@
 @font-face {
   font-family: 'Zalando Sans SemiExpanded';
   font-weight: 400;
-  src: url('.assets/fonts/zalando/ZalandoSansExpanded-VariableFont_wght.woff2') format('woff2');
+  src: url('.assets/fonts/zalando-semiexpanded/ZalandoSansSemiExpanded-VariableFont_wght.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Zalando Sans SemiExpanded';
   font-weight: 400;
   font-style: italic;
-  src: url('.assets/fonts/zalando/ZalandoSansExpanded-Italic-VariableFont_wght.woff2') format('woff2');
+  src: url('.assets/fonts/zalando-semiexpanded/ZalandoSansSemiExpanded-Italic-VariableFont_wght.woff2') format('woff2');
 }
+
+
+
+@font-face {
+  font-family: 'Zalando Sans SemiExpanded';
+  font-weight: 400;
+  src: url('.assets/fonts/zalando-expanded/ZalandoSansExpanded-VariableFont_wght.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Zalando Sans SemiExpanded';
+  font-weight: 400;
+  font-style: italic;
+  src: url('.assets/fonts/zalando-expanded/ZalandoSansExpanded-Italic-VariableFont_wght.woff2') format('woff2');
+}
+
+
 
 @font-face {
   font-family: 'Inter';
