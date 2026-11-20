@@ -3,14 +3,14 @@
 @font-face {
   font-family: 'Zalando Sans SemiExpanded';
   font-weight: 400;
-  src: url('.assets/fonts/zalando-semiexpanded/ZalandoSansSemiExpanded-VariableFont_wght.woff2') format('woff2');
+  src: url('assets/fonts/zalando-semiexpanded/ZalandoSansSemiExpanded-VariableFont_wght.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Zalando Sans SemiExpanded';
   font-weight: 400;
   font-style: italic;
-  src: url('.assets/fonts/zalando-semiexpanded/ZalandoSansSemiExpanded-Italic-VariableFont_wght.woff2') format('woff2');
+  src: url('assets/fonts/zalando-semiexpanded/ZalandoSansSemiExpanded-Italic-VariableFont_wght.woff2') format('woff2');
 }
 
 
@@ -18,14 +18,14 @@
 @font-face {
   font-family: 'Zalando Sans SemiExpanded';
   font-weight: 400;
-  src: url('.assets/fonts/zalando-expanded/ZalandoSansExpanded-VariableFont_wght.woff2') format('woff2');
+  src: url('assets/fonts/zalando-expanded/ZalandoSansExpanded-VariableFont_wght.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Zalando Sans SemiExpanded';
   font-weight: 400;
   font-style: italic;
-  src: url('.assets/fonts/zalando-expanded/ZalandoSansExpanded-Italic-VariableFont_wght.woff2') format('woff2');
+  src: url('assets/fonts/zalando-expanded/ZalandoSansExpanded-Italic-VariableFont_wght.woff2') format('woff2');
 }
 
 
@@ -33,45 +33,45 @@
 @font-face {
   font-family: 'Inter';
   font-weight: 400;
-  src: url('.assets/fonts/inter/Inter-Regular.woff2') format('woff2');
+  src: url('assets/fonts/inter/Inter-Regular.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Inter';
   font-weight: 400;
   font-style: italic;
-  src: url('.assets/fonts/inter/Inter-Italic.woff2') format('woff2');
+  src: url('assets/fonts/inter/Inter-Italic.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Instrument Serif';
   font-weight: 400;
-  src: url('.assets/fonts/instrument-serif/InstrumentSerif-Regular.woff2') format('woff2');
+  src: url('assets/fonts/instrument-serif/InstrumentSerif-Regular.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Instrument Serif';
   font-weight: 400;
   font-style: italic;
-  src: url('.assets/fonts/instrument-serif/InstrumentSerif-Italic.woff2') format('woff2');
+  src: url('assets/fonts/instrument-serif/InstrumentSerif-Italic.woff2') format('woff2');
 }
 
 @font-face {
     font-family: 'Geist Mono';
     font-weight: 400;
-    src: url('..assets/fonts/geist-mono/GeistMono-Regular.woff2') format('woff2');
+    src: url('assets/fonts/geist-mono/GeistMono-Regular.woff2') format('woff2');
 }
 
 @font-face {
     font-family: 'Geist Pixel';
     font-weight: 400;
-    src: url('..assets/fonts/geist-pixel/GeistPixel-Square.woff2') format('woff2');
+    src: url('assets/fonts/geist-pixel/GeistPixel-Square.woff2') format('woff2');
 }
 
 @font-face {
     font-family: 'Knewave';
     font-weight: 400;
-    src: url('..assets/fonts/knewave/Knewave-Regular.woff2') format('woff2');
+    src: url('assets/fonts/knewave/Knewave-Regular.woff2') format('woff2');
 }
 
 /* vars! */
