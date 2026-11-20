@@ -1,0 +1,24 @@
+# Keep in git for design/AI reference; do not ship to Vercel deploys.
+# Official mechanism: https://vercel.com/docs/deployments/vercel-ignore
+
+# Design / insp dumps
+assets/@*/
+.archive/
+.vite/
+
+# Full Google Fonts source kits (TTF + every static weight).
+# Site CSS only loads specific .woff2 files under assets/fonts/<family>/.
+assets/fonts/@ folders/
+**/*.ttf
+**/*.otf
+
+# Scratch / non-site files at repo root
+*.md
+!README.md
+funtest.ts
+image.png
+image-1.png
+
+# Common noise
+.git/
+.github/
