@@ -24,6 +24,11 @@ im not accepting public contributions bc its just my personal site lol.
 ## how deployed
 on github pages and vercel.
 
+## ai disclosure
+i uses ai on:
+- some minor tab completion 
+- the script.js for pushing the navbar to other html pages from the navbar.html file
+- used it like a tutor a lil on some css box model stuff and help getting font styling to look like designs i made (without ai btw)
 
 # meta
 hiii!
