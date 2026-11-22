@@ -10,14 +10,19 @@ just my personal corner of the internet ig~
     - How it can be deployed
 
 ## what is it?
+my personal site. info abt me and my projects.
 
 ## how made
+i made it with html, css, and js. keeping it vanilla for now to practice raw html/css/js before i learn css/js frameworks/libraries.
 
 ## demo
+live [here](https://nitrogeo.vercel.app/).
 
 ## how contribute
+im not accepting public contributions bc its just my personal site lol.
 
 ## how deployed
+on github pages and vercel.
 
 
 # meta
